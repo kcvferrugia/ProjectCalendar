@@ -1,0 +1,127 @@
+﻿
+@{
+    ViewBag.Title = "Dash";
+}
+
+<?php
+//db details
+$dbHost = 'localhost';
+$dbUsername = 'root';
+$dbPassword = '';
+$dbName = 'StudyTimeHelper';
+
+//connect & select the database
+$db = new mysqli($dbHost, $dbUserName, $dbPassword, $dbName);
+
+if ($db->connect_error){
+die("Connection failed");
+}
+?>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title>My TMT</title>
+    @*<link rel="stylesheet" href="~/Content/fullcalendar.css">*@
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Raleway" rel="stylesheet">
+    <style>
+        .container {
+            font-family: 'Raleway', sans-serif;
+            margin-top: 35px;
+        }
+
+        th {
+            height: 30px;
+            text-align: center;
+            font-weight: 100;
+        }
+
+        td {
+            height: 100px;
+        }
+
+        .today {
+            background: teal;
+        }
+
+        th:nth-last-of-type(7).td:nth-last-of-type(7) {
+            color: cornsilk;
+        }
+
+        th:nth-last-of-type(1).td:nth-last-of-type(1) {
+            color: cornflowerblue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        @*<h3><a href="?my=<?php echo $prev; ?>" $lt;></a> <?php echo $html_title; ?> <a href="<?php echo $next; ?>" &gt;></a></h3>*@
+        <table class="table table-bordered">
+            <tr>
+                <th>S</th>
+                <th>M</th>
+                <th>T</th>
+                <th>W</th>
+                <th>TH</th>
+                <th>F</th>
+                <th>S</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td class="today">8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+          
+           
+           
+
+        </table>
+    </div>
+</body>
+</html>

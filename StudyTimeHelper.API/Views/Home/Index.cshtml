@@ -1,0 +1,146 @@
+﻿<
+@{
+    ViewBag.Title = "Event";
+}
+
+<?php
+
+$dbHost = '(localdb)\MSSQLLocalDB';
+$dbUsername = 'StudyTimeHelperUser';
+$dbPassword = '';
+$dbName = 'StudyTimeHelper';
+
+//connect & select the database
+$db = new mysqli($dbHost, $dbUserName, $dbPassword, $dbName) or die('Error connecting to SQL Server');
+
+$query = 'SELECT * FROM dbo.Events WHERE CAST(s)';
+
+
+
+
+
+
+
+
+
+mysqli_query($db, $query) or die('Error querying db.');
+
+require_once('function.php');
+
+//Get prev & next month
+
+if (isset($_GET['ym'])){
+$ym = #_GET['ym'];
+} else {
+//This month
+$ym = date('Y-m');
+}
+
+$timestamp = strtotime($ym.'-01');
+
+
+if ($timestamp === false) {
+$timestamp = time();
+}
+
+//Today (Format: 2018-01-01)
+$today = date('Y-m-j', time());
+
+//h3 title (Format: January 2018)
+$html_title = date('F Y', $timestamp);
+
+//create prev & next month link ...mktime(hour, minute, second, month, day, year)
+$prev = date('Y-m', mktime(0,0,0, date('m', $timestamp)-1, 1, date('Y', $timestamp)));
+$next = date('Y-m', mktime(0,0,0, date('m', $timestamp)-1, 1, date('Y', $timestamp)));
+
+//Number of days in month
+$day_count = date('t', $timestamp);
+
+//0:Sun, 1:Mon, 2:Tue...
+$str = date('w', mktime(0, 0, 0, date('m', $timestamp), 1, date('Y', $timestamp)));
+
+//Create calendar
+$weeks = array();
+$week = '';
+
+//Add empty cell
+$week = str_repeat('<td></td>',$str);
+
+
+$db = StudyTimeHelper();
+
+for ($day = 1; $day<= $day_count; $day++; $str++) {
+$date = $ym.'-'.$day;
+
+//Get schedule by date
+$sql = 'SELECT * FROM schedules WHERE CAST(s)';
+}
+?>
+
+<script>
+    $(function () {
+        var transEndEventNames
+    }
+</script>
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title>My TMT</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Raleway" rel="stylesheet">
+    <style>
+        .container {
+            font-family: 'Raleway', sans-serif;
+            margin-top: 80px;
+        }
+
+        th {
+            height: 30px;
+            text-align: center;
+            font-weight: 100;
+        }
+
+        td {
+            height: 100px;
+        }
+
+        .today {
+            background: teal;
+        }
+
+        th:nth-last-of-type(7).td:nth-last-of-type(7) {
+            color: cornsilk;
+        }
+
+        th:nth-last-of-type(1).td:nth-last-of-type(1) {
+            color: cornflowerblue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h3><a href="?my=<?php echo $prev; ?>" $lt;></a> <?php echo $html_title; ?> <a href="<?php echo $next; ?>" &gt;></a></h3>
+        <table class="table table-bordered">
+            <tr>
+                <th>S</th>
+                <th>M</th>
+                <th>T</th>
+                <th>W</th>
+                <th>TH</th>
+                <th>F</th>
+                <th>S</th>
+            </tr>           
+            <?php
+            foreach ($weeks as $week)
+                echo $weeks;
+            ?>
+
+        </table>
+    </div>
+</body>
+</html>

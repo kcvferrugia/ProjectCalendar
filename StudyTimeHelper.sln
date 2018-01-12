@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyTimeHelper.Data", "StudyTimeHelper.Data\StudyTimeHelper.Data.csproj", "{CA28D2AC-2721-4909-A383-FB48CCEA5476}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyTimeHelper.Service", "StudyTimeHelper.Service\StudyTimeHelper.Service.csproj", "{FBEEA575-22B7-4C3E-929C-CE38C03AB38F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyTimeHelper.Contracts", "StudyTimeHelper.Contracts\StudyTimeHelper.Contracts.csproj", "{664E4A45-7D95-4EE7-BBAA-0F132C509830}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyTimeHelper.MVCWeb", "StudyTimeHelper.MVCWeb\StudyTimeHelper.MVCWeb.csproj", "{56E17C17-5F18-47F4-AA1D-9FF8E91693A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudyTimeHelper.Models", "..\..\..\Users\kcvf4\source\repos\StudyCalendar\StudyCalendar.Models\StudyTimeHelper.Models.csproj", "{08BA228B-3D84-4447-99F0-5ED732097733}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Event.Tests", "Events.Tests\Event.Tests.csproj", "{6766E993-3A9C-4D85-9CDC-8136C260E543}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA28D2AC-2721-4909-A383-FB48CCEA5476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA28D2AC-2721-4909-A383-FB48CCEA5476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA28D2AC-2721-4909-A383-FB48CCEA5476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA28D2AC-2721-4909-A383-FB48CCEA5476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBEEA575-22B7-4C3E-929C-CE38C03AB38F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBEEA575-22B7-4C3E-929C-CE38C03AB38F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBEEA575-22B7-4C3E-929C-CE38C03AB38F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBEEA575-22B7-4C3E-929C-CE38C03AB38F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{664E4A45-7D95-4EE7-BBAA-0F132C509830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{664E4A45-7D95-4EE7-BBAA-0F132C509830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{664E4A45-7D95-4EE7-BBAA-0F132C509830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{664E4A45-7D95-4EE7-BBAA-0F132C509830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56E17C17-5F18-47F4-AA1D-9FF8E91693A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56E17C17-5F18-47F4-AA1D-9FF8E91693A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56E17C17-5F18-47F4-AA1D-9FF8E91693A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56E17C17-5F18-47F4-AA1D-9FF8E91693A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08BA228B-3D84-4447-99F0-5ED732097733}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08BA228B-3D84-4447-99F0-5ED732097733}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08BA228B-3D84-4447-99F0-5ED732097733}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08BA228B-3D84-4447-99F0-5ED732097733}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6766E993-3A9C-4D85-9CDC-8136C260E543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6766E993-3A9C-4D85-9CDC-8136C260E543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6766E993-3A9C-4D85-9CDC-8136C260E543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6766E993-3A9C-4D85-9CDC-8136C260E543}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D5FE2031-3F92-4D17-B54F-633504621AE8}
+	EndGlobalSection
+EndGlobal

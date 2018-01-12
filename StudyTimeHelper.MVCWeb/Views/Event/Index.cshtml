@@ -1,0 +1,86 @@
+﻿@model IEnumerable<StudyTimeHelper.Models.EventListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+@if (TempData.ContainsKey("SaveResult"))
+ {
+    <div class="alert alert-success fade in" role="alert">
+        @ViewBag.SaveResult
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+ }
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EventId)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Start)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.End)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsAllDay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EventRepeat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ThemeColor)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+     {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Start)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.End)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsAllDay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EventRepeat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThemeColor)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { EventId = item.EventId }) |
+                @Html.ActionLink("Details", "Details", new { EventId = item.EventId }) |
+                @Html.ActionLink("Delete", "Delete", new { EventId = item.EventId })
+            </td>
+        </tr>
+     }
+
+</table>
+
